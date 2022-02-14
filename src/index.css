@@ -1,0 +1,39 @@
+.drag-list-container {
+  display: flex;
+}
+
+.dragList {
+  margin: 0;
+  list-style: none;
+  padding: 0px;
+  text-align: center;
+  padding-bottom: 15px;
+  height: 100%;
+}
+
+.drag-list-item {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.drag-list-item:hover {
+  background-color: #ffa000;
+}
+
+.list-with-header {
+  text-align: center;
+  background-color: #cccccc;
+  margin-left: 5px;
+  border-radius: 4px;
+  width: 100px;
+}
+
+.list-header {
+  margin: 5px;
+  user-select: none;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
