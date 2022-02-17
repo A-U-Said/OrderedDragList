@@ -2,9 +2,10 @@ import { useState, useEffect, DragEvent } from "react";
 
 type orderedDragListProps = {
     childLists: dragList[];
+    callback?: Function;
 };
 
-const OrderedDragList = ({childLists} : orderedDragListProps): JSX.Element => {
+const OrderedDragList = ({childLists, callback} : orderedDragListProps): JSX.Element => {
 
     const [orderedDragLists, setOrderedDragLists] = useState<dragList[]>(childLists);
     const [transferItem, setTransferItem] = useState<transferItem>({ originList: "", oldIndex: -1, data:{name: "", value: ""} });
@@ -74,6 +75,7 @@ const OrderedDragList = ({childLists} : orderedDragListProps): JSX.Element => {
     }
 
     return (
+        <>
         <div className="drag-list-container">        
             {
                 orderedDragLists.map((list, listIndex) => (
@@ -89,6 +91,8 @@ const OrderedDragList = ({childLists} : orderedDragListProps): JSX.Element => {
                 ))
             }
         </div>
+            { callback && <button className="callback-button" type="button" onClick={e => callback(orderedDragLists)}>Export list structure</button> }
+        </>
     );
 }
 

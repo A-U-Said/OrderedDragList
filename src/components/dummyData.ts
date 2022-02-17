@@ -30,7 +30,7 @@ const dummyData = [
         ]
     },
     {   
-        name: "No children",
+        name: "Favourites",
         value: "",
         children: []
     },

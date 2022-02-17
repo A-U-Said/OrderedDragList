@@ -37,3 +37,17 @@
 hr.solid {
   border-top: 3px solid #bbb;
 }
+
+.callback-button {
+  margin: 5px;
+  text-align: center;
+  background-color: #cccccc;
+  border-radius: 4px;
+  padding: 6px 8px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.callback-button:hover {
+  background-color: #ffa000;
+}
